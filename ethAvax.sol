@@ -1,12 +1,12 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 //write a smart contract that implements the require(), assert() and revert() statements.
-contract Meta {
+contract Damba {
     address owner;
-    uint a;
+    uint z;
   
 
-    error InputMustBeGreaterThanFive();
+    error InputMustBeGreaterThanSix();
 
     constructor() {
         owner = msg.sender;
@@ -18,16 +18,16 @@ contract Meta {
 
     }
 
-    function setVars(uint _a) external onlyOwner{
-        a = _a;
+    function setVars(uint _z) external onlyOwner{
+        z = _z;
     }
-    function testRequire(uint _c) external pure{
-        require(_c == 0);
+    function testRequire(uint _y) external pure{
+        require(_y == 0);
     }
-    function testAssert(uint b) external pure{
-        assert(b > 5);
+    function testAssert(uint x) external pure{
+        assert(x > 6);
     }
-    function testRevert(uint b) external pure{
-        if (b < 5) revert InputMustBeGreaterThanFive();
+    function testRevert(uint x) external pure{
+        if (x < 6) revert InputMustBeGreaterThanSix();
     }
 }

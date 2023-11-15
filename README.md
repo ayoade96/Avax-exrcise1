@@ -1,10 +1,10 @@
-# Meta Smart Contract
+# Damba Smart Contract
 
-This is a Solidity smart contract called `Meta` that demonstrates the use of `require()`, `assert()`, and `revert()` statements. The contract allows the owner to set a variable `a` and provides three functions to showcase the use of these statements.
+This repository features a Solidity smart contract named `Damba` that exemplifies the utilization of `require()`, `assert()`, and `revert()` statements. The contract enables the owner to set a variable `z` and includes three functions to demonstrate the implementation of these statements.
 
 ## License
 
-This code is released under the MIT License. See [LICENSE](LICENSE) for more information.
+This code is provided under the MIT License. Refer to [LICENSE](LICENSE) for additional details.
 
 ## Smart Contract Details
 
@@ -13,41 +13,41 @@ This code is released under the MIT License. See [LICENSE](LICENSE) for more inf
 
 ## Description
 
-The `Meta` smart contract has the following functionality:
+The `Damba` smart contract encompasses the following functionality:
 
-- `constructor`: Initializes the contract with the address of the deployer as the owner.
-- `onlyOwner` Modifier: This modifier ensures that only the owner of the contract can execute specific functions.
+- `constructor`: Initializes the contract with the deployer's address as the owner.
+- `onlyOwner` Modifier: Ensures that only the contract owner can execute specific functions.
 
 ## Functions
 
-### 1. `setVars(uint _a)`
+### 1. `setVars(uint _z)`
 
 - Modifier: `onlyOwner`
-- Description: Allows the owner to set the value of variable `a`.
+- Description: Allows the owner to set the value of the variable `z`.
 
-### 2. `testRequire(uint _c)`
+### 2. `testRequire(uint _y)`
 
-- Description: A function to demonstrate the use of the `require()` statement. It will revert the transaction if the condition `_c == 0` is not met.
+- Description: Illustrates the use of the `require()` statement. The transaction will revert if the condition `_y == 0` is not met.
 
-### 3. `testAssert(uint b)`
+### 3. `testAssert(uint x)`
 
-- Description: A function to demonstrate the use of the `assert()` statement. It will revert the transaction if the condition `b > 5` is not met.
+- Description: Demonstrates the use of the `assert()` statement. The transaction will revert if the condition `x > 6` is not met.
 
-### 4. `testRevert(uint b)`
+### 4. `testRevert(uint x)`
 
-- Description: A function to demonstrate the use of the `revert()` statement with a custom error message. It will revert the transaction if the condition `b < 5` is not met.
+- Description: Exhibits the use of the `revert()` statement with a custom error message. The transaction will revert if the condition `x < 6` is not met.
 
 ## Usage
 
 1. Deploy this smart contract to the Ethereum blockchain using a development environment like Remix or Truffle.
 
-2. Call the `setVars(uint _a)` function to set the value of variable `a`. Only the contract owner can do this.
+2. Invoke the `setVars(uint _z)` function to set the value of variable `z`. Only the contract owner can perform this action.
 
-3. Call the `testRequire(uint _c)` function to test the `require()` statement.
+3. Invoke the `testRequire(uint _y)` function to test the `require()` statement.
 
-4. Call the `testAssert(uint b)` function to test the `assert()` statement.
+4. Invoke the `testAssert(uint x)` function to test the `assert()` statement.
 
-5. Call the `testRevert(uint b)` function to test the `revert()` statement.
+5. Invoke the `testRevert(uint x)` function to test the `revert()` statement.
 
 ## Example
 
@@ -55,14 +55,14 @@ Here is an example of how to interact with the contract using the Remix IDE:
 
 1. Deploy the contract.
 
-2. Call the `setVars(uint _a)` function to set the value of `a`.
+2. Invoke the `setVars(uint _z)` function to set the value of `z`.
 
-3. Call the `testRequire(uint _c)` function with different values of `_c` to see how the `require()` statement works.
+3. Invoke the `testRequire(uint _y)` function with different values of `_y` to observe the `require()` statement in action.
 
-4. Call the `testAssert(uint b)` function with different values of `b` to see how the `assert()` statement works.
+4. Invoke the `testAssert(uint x)` function with different values of `x` to observe the `assert()` statement in action.
 
-5. Call the `testRevert(uint b)` function with different values of `b` to see how the `revert()` statement works.
+5. Invoke the `testRevert(uint x)` function with different values of `x` to observe the `revert()` statement in action.
 
 ## License
 
-This code is released under the MIT License. See [LICENSE](LICENSE) for more information.
+This code is released under the MIT License. Refer to [LICENSE](LICENSE) for additional information.
