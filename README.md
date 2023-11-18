@@ -49,20 +49,6 @@ The `Damba` smart contract encompasses the following functionality:
 
 5. Invoke the `testRevert(uint x)` function to test the `revert()` statement.
 
-## Example
-
-Here is an example of how to interact with the contract using the Remix IDE:
-
-1. Deploy the contract.
-
-2. Invoke the `setVars(uint _z)` function to set the value of `z`.
-
-3. Invoke the `testRequire(uint _y)` function with different values of `_y` to observe the `require()` statement in action.
-
-4. Invoke the `testAssert(uint x)` function with different values of `x` to observe the `assert()` statement in action.
-
-5. Invoke the `testRevert(uint x)` function with different values of `x` to observe the `revert()` statement in action.
-
 ## License
 
 This code is released under the MIT License. Refer to [LICENSE](LICENSE) for additional information.
