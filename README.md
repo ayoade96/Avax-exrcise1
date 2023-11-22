@@ -1,54 +1,66 @@
-# Damba Smart Contract
+# Simple Voting System Smart Contract
 
-This repository features a Solidity smart contract named `Damba` that exemplifies the utilization of `require()`, `assert()`, and `revert()` statements. The contract enables the owner to set a variable `z` and includes three functions to demonstrate the implementation of these statements.
-
-## License
-
-This code is provided under the MIT License. Refer to [LICENSE](LICENSE) for additional details.
-
-## Smart Contract Details
-
-- Solidity Version: 0.8.0
-- SPDX-License-Identifier: MIT
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
 
-The `Damba` smart contract encompasses the following functionality:
+This is a simple Voting System smart contract written in Solidity. It demonstrates the use of `require()`, `assert()`, and `revert()` statements for error handling.
 
-- `constructor`: Initializes the contract with the deployer's address as the owner.
-- `onlyOwner` Modifier: Ensures that only the contract owner can execute specific functions.
+## Author
 
-## Functions
+ Ayoade Abdulrahman Adesile
 
-### 1. `setVars(uint _z)`
+## Features
 
-- Modifier: `onlyOwner`
-- Description: Allows the owner to set the value of the variable `z`.
+- **Voter Registration:** Allows users to register as voters by providing their full name, age, and political affiliation.
+- **Age Verification:** Provides a function to verify a voter's age.
+- **Voter Unregistration:** Allows voters to unregister themselves.
+- **View Voter Profile:** Retrieves and displays the profile details of a registered voter.
 
-### 2. `testRequire(uint _y)`
+## Smart Contract Details
 
-- Description: Illustrates the use of the `require()` statement. The transaction will revert if the condition `_y == 0` is not met.
+### Struct
 
-### 3. `testAssert(uint x)`
+```solidity
+struct Voter {
+    string fullName;
+    uint256 age;
+    string politicalAffiliation;
+}
+```
+### Functions
 
-- Description: Demonstrates the use of the `assert()` statement. The transaction will revert if the condition `x > 6` is not met.
+- **Register Voter**
 
-### 4. `testRevert(uint x)`
+```
+function registerVoter(
+    string memory _fullName,
+    uint256 _age,
+    string memory _politicalAffiliation
+) public
+```
+- **Verify Voter Age**
 
-- Description: Exhibits the use of the `revert()` statement with a custom error message. The transaction will revert if the condition `x < 6` is not met.
+```
+function verifyVoterAge(uint256 _age) public view
+```
+- **Unregister Voter**
+```
+function unregisterVoter() public
+```
+- **viewVoterProfile**
+```
+function viewVoterProfile() public view returns (string memory, uint256, string memory)
+```
 
 ## Usage
 
-1. Deploy this smart contract to the Ethereum blockchain using a development environment like Remix or Truffle.
+- **Register a Voter**: Use the registerVoter function to register as a voter, providing your full name, age, and political affiliation.
 
-2. Invoke the `setVars(uint _z)` function to set the value of variable `z`. Only the contract owner can perform this action.
 
-3. Invoke the `testRequire(uint _y)` function to test the `require()` statement.
+- **Verify Voter Age**: function to verify the age of a registered voter.
 
-4. Invoke the `testAssert(uint x)` function to test the `assert()` statement.
+- **Unregister Voter**: Use the unregisterVoter function to unregister as a voter.
 
-5. Invoke the `testRevert(uint x)` function to test the `revert()` statement.
+- **View Voter Profile**: Use the viewVoterProfile function to view the profile details of a registered voter.
 
-## License
-
-This code is released under the MIT License. Refer to [LICENSE](LICENSE) for additional information.
